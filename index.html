@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Zahid – Full-stack .NET & Angular Developer</title>
+  <meta name="title" content="Muhammad Zahid – Full-stack .NET & Angular Developer">
+  <meta name="description" content="Full-stack .NET Core and Angular developer with 3+ years experience building scalable APIs, cloud solutions (Azure, AWS), and microservices. Remote-ready software engineer specializing in ASP.NET Core, EF Core, RxJS, Docker, and Kubernetes.">
+
+  <!-- Keywords -->
+  <meta name="keywords" content=".NET Core, ASP.NET Core, Angular, TypeScript, RxJS, EF Core, SQL Server, Azure, AWS Lambda, Kubernetes, Docker, SignalR, REST APIs, Git, CI/CD, Remote Software Engineer, Full-stack Developer, Lahore Pakistan">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#4f46e5;
+      --accent-hover:#4338ca;
+      --glass:rgba(255,255,255,0.04);
+      --text:#e6eef6;
+      --border:rgba(255,255,255,0.06);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      background:linear-gradient(180deg,#071023 0%, #071831 100%);
+      color:var(--text);
+      line-height:1.6;
+      min-height:100vh;
+    }
+    .container{max-width:1080px;margin:0 auto;padding:24px}
+    
+    /* Header */
+    header{display:flex;gap:24px;align-items:center;padding:32px 0}
+    .avatar{
+      width:96px;
+      height:96px;
+      border-radius:16px;
+      background:linear-gradient(135deg,#6ee7b7,#3b82f6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:32px;
+      color:#07203a;
+      box-shadow:0 8px 24px rgba(79,70,229,0.3);
+      flex-shrink:0;
+    }
+    .header-content{flex:1}
+    h1{font-size:28px;margin-bottom:8px;font-weight:700}
+    h1 .accent{color:var(--accent)}
+    p.lead{color:var(--muted);font-size:16px;margin-bottom:14px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{
+      background:rgba(79,70,229,0.1);
+      border:1px solid rgba(79,70,229,0.3);
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:13px;
+      color:#a5b4fc;
+      font-weight:500;
+    }
+    
+    /* Main Layout */
+    main{margin-top:32px}
+    .two-cols{display:grid;grid-template-columns:1fr 340px;gap:24px}
+    
+    /* Cards */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border-radius:16px;
+      padding:24px;
+      box-shadow:0 4px 24px rgba(2,6,23,0.5);
+      border:1px solid var(--border);
+      margin-bottom:20px;
+    }
+    .card:last-child{margin-bottom:0}
+    
+    /* Section Titles */
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:16px;
+      padding-bottom:10px;
+      border-bottom:1px solid var(--border);
+    }
+    .section-title h3{font-size:18px;font-weight:600;color:var(--text)}
+    .section-title::before{
+      content:'';
+      width:4px;
+      height:20px;
+      background:var(--accent);
+      border-radius:2px;
+    }
+    
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{
+      background:rgba(255,255,255,0.04);
+      padding:10px 14px;
+      border-radius:8px;
+      font-size:14px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.05);
+      transition:all 0.2s ease;
+    }
+    .skill:hover{
+      background:rgba(79,70,229,0.1);
+      border-color:rgba(79,70,229,0.3);
+      color:#a5b4fc;
+      transform:translateY(-2px);
+    }
+    
+    /* Projects */
+    .projects{display:grid;gap:16px}
+    .project{
+      padding:18px;
+      border-radius:12px;
+      background:rgba(255,255,255,0.02);
+      border:1px solid var(--border);
+      transition:all 0.3s ease;
+    }
+    .project:hover{
+      background:rgba(255,255,255,0.04);
+      border-color:rgba(79,70,229,0.3);
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(79,70,229,0.15);
+    }
+    .project h4{
+      font-size:17px;
+      margin-bottom:8px;
+      color:var(--text);
+      font-weight:600;
+    }
+    .project .meta{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .project .meta span{
+      background:rgba(255,255,255,0.05);
+      padding:2px 8px;
+      border-radius:4px;
+    }
+    .project p{font-size:14px;line-height:1.6;color:#cbd5e1}
+    
+    /* Experience */
+    .experience-item{
+      margin-bottom:18px;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .experience-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+    .experience-item strong{font-size:15px;color:var(--text);display:block;margin-bottom:4px}
+    .experience-item .meta{color:var(--muted);font-size:13px}
+    
+    /* Buttons */
+    .actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+    .btn{
+      background:var(--accent);
+      color:white;
+      padding:10px 20px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      display:inline-block;
+      transition:all 0.2s ease;
+      border:1px solid transparent;
+    }
+    .btn:hover{
+      background:var(--accent-hover);
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(79,70,229,0.4);
+    }
+    .btn.ghost{
+      background:transparent;
+      border:1px solid var(--border);
+      color:var(--text);
+    }
+    .btn.ghost:hover{
+      background:rgba(255,255,255,0.05);
+      border-color:var(--accent);
+    }
+    
+    /* Contact */
+    .contact-list{display:flex;flex-direction:column;gap:10px}
+    .contact-item{
+      background:rgba(255,255,255,0.02);
+      padding:12px;
+      border-radius:10px;
+      font-size:14px;
+      border:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .contact-item strong{color:var(--muted);font-weight:500;min-width:80px}
+    a.link{
+      color:var(--accent);
+      text-decoration:none;
+      transition:color 0.2s ease;
+    }
+    a.link:hover{color:#6366f1;text-decoration:underline}
+    
+    /* Sidebar */
+    .badge{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:8px;
+      background:rgba(79,70,229,0.1);
+      border:1px solid rgba(79,70,229,0.3);
+      font-size:13px;
+      color:#a5b4fc;
+      font-weight:500;
+    }
+    .sidebar-content p{font-size:14px;line-height:1.6;margin-bottom:12px}
+    .sidebar-content .meta{display:block;margin-top:4px}
+    
+    /* Footer */
+    footer{
+      margin-top:48px;
+      padding:24px 0;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+      border-top:1px solid var(--border);
+    }
+    
+    /* Responsive */
+    @media (max-width:900px){
+      .two-cols{grid-template-columns:1fr}
+      .avatar{width:80px;height:80px;font-size:28px}
+      h1{font-size:24px}
+      header{padding:20px 0}
+      .container{padding:20px}
+    }
+    
+    @media (max-width:600px){
+      .chips{flex-direction:column}
+      .chip{text-align:center}
+      .actions{flex-direction:column}
+      .btn{text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">MZ</div>
+      <div class="header-content">
+        <h1>Muhammad Zahid – <span class="accent">.NET Developer</span></h1>
+        <p class="lead">Full-stack (.NET Core + Angular) · 3+ years experience · Remote-ready · PKT (GMT+5)</p>
+        <div class="chips">
+          <div class="chip">✓ Open to Full-time Remote</div>
+          <div class="chip">✓ Available Immediately</div>
+          <div class="chip">✓ Flexible Timezone (EST/CET overlap)</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="two-cols">
+        <div>
+          <div class="card">
+            <div class="section-title"><h3>About</h3></div>
+            <p>I build production-quality APIs and dashboards using <strong>.NET Core</strong>, <strong>EF Core</strong>, and <strong>Angular</strong>. My focus is on clean architecture, reliable integrations, and measurable improvements—such as query optimizations and automated workflows. I enjoy solving backend challenges and shipping features end-to-end for remote teams.</p>
+          </div>
+
+          <div class="card">
+            <div class="section-title"><h3>Key Skills</h3></div>
+            <div class="skills">
+              <span class="skill">.NET Core</span>
+              <span class="skill">C#</span>
+              <span class="skill">ASP.NET Core Web API</span>
+              <span class="skill">Entity Framework Core</span>
+              <span class="skill">SQL Server</span>
+              <span class="skill">Angular</span>
+	      <span class="skill">RxJS</span>
+	      <span class="skill">HTML5 / CSS3</span>
+	      <span class="skill">NgRx</span>
+              <span class="skill">TypeScript</span>
+              <span class="skill">Azure</span>
+              <span class="skill">AWS Lambda</span>
+	      <span class="skill">Kubernetes</span>
+	      <span class="skill">Microservices</span>
+              <span class="skill">SignalR</span>
+              <span class="skill">Docker</span>
+              <span class="skill">REST APIs</span>
+              <span class="skill">Git</span>
+	      <span class="skill">CI/CD (GitHub Actions, Azure DevOps)</span>
+	      <span class="skill">Unit Testing (xUnit, Jasmine, Karma)</span>
+	      <span class="skill">NoSQL (MongoDB, Cosmos DB)</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="section-title"><h3>Experience</h3></div>
+            <div class="experience-item">
+              <strong>.NET Developer – Epazz Inc.</strong>
+              <div class="meta">Apr 2025 – Present · Lahore (Remote-friendly)</div>
+            </div>
+            <div class="experience-item">
+              <strong>Software Engineer – Tecspine</strong>
+              <div class="meta">Sep 2023 – Jan 2025 · Lahore</div>
+            </div>
+          </div>
+
+          <div class="card" id="projects">
+            <div class="section-title"><h3>Selected Projects</h3></div>
+            <div class="projects">
+              <div class="project">
+                <h4>Connexien – Talent Matching Platform</h4>
+                <div class="meta">
+                  <span>ASP.NET MVC</span>
+                  <span>Matching Engine</span>
+                  <span>Search & Filters</span>
+                </div>
+                <p>Built an on-demand marketplace connecting financial firms with industry experts. Implemented intelligent matching logic to filter consultants by skills, experience, certifications, and ratings, improving discovery and reducing manual search time.</p>
+              </div>
+
+              <div class="project">
+                <h4>Synergy – Healthcare Management System</h4>
+                <div class="meta">
+                  <span>ASP.NET Core</span>
+                  <span>SignalR</span>
+                  <span>Multi-role Workflow</span>
+                </div>
+                <p>Developed a multi-role referral workflow handling Admins, Managers, Doctors, and Clients. Implemented workload-based doctor assignment, role-specific guards, and real-time status updates via SignalR for efficient case management.</p>
+              </div>
+
+              <div class="project">
+                <h4>Scanner – E-commerce Price Analysis Tool</h4>
+                <div class="meta">
+                  <span>.NET Core</span>
+                  <span>Web Scraping</span>
+                  <span>ROI Analytics</span>
+                </div>
+                <p>Created a scraping and analysis pipeline to compare market prices and calculate ROI for product pallets. Implemented data cleaning, pattern matching, and aggregated profit reporting to support buying decisions.</p>
+              </div>
+
+              <div class="project">
+                <h4>Prooph – Advertising Effectiveness Tool</h4>
+                <div class="meta">
+                  <span>ASP.NET</span>
+                  <span>Stripe Integration</span>
+                  <span>Subscription Model</span>
+                </div>
+                <p>Built subscription-based access controls with Stripe integration, feature gating, and campaign metric calculations (CTR, cost-per-conversion), ensuring secure and revenue-linked analytics for users.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="section-title"><h3>Contact & Links</h3></div>
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Email:</strong>
+                <a class="link" href="mailto:mzahid04040@gmail.com">mzahid04040@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <strong>Phone:</strong>
+                <span>+92 304 2067603</span>
+              </div>
+              <div class="contact-item">
+                <strong>Location:</strong>
+                <span>Lahore, Pakistan (GMT+5)</span>
+              </div>
+              <div class="contact-item">
+                <strong>LinkedIn:</strong>
+                <a class="link" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a>
+              </div>
+              <div class="contact-item">
+                <strong>GitHub:</strong>
+                <a class="link" href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <div class="section-title"><h3>Quick Facts</h3></div>
+            <div class="sidebar-content">
+              <p class="meta">3+ years in .NET & Angular · Remote-ready professional</p>
+              <div class="badge">Looking for: Full-time Remote</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="section-title"><h3>Download CV</h3></div>
+            <a class="btn" href="./Muhammad-Zahid-Resume.pdf" download>Download PDF Resume</a>
+          </div>
+
+          <div class="card">
+            <div class="section-title"><h3>Availability</h3></div>
+            <div class="sidebar-content">
+              <p class="meta">Full-time · Flexible hours · Good overlap with US & EU timezones</p>
+              <strong style="display:block;margin-top:12px;font-size:14px">Hourly Rate:</strong>
+              <div class="meta">$15–25/hr (negotiable based on project)</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="section-title"><h3>Education</h3></div>
+            <div class="sidebar-content">
+              <strong style="display:block;font-size:14px;margin-bottom:4px">BS Computer Science</strong>
+              <div class="meta">UET Lahore (2018–2022)</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div>© 2025 Muhammad Zahid – .NET Developer · <a class="link" href="mailto:mzahid04040@gmail.com">Get in touch</a></div>
+    </footer>
+  </div>
+</body>
+</html>
