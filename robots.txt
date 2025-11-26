@@ -1,0 +1,7 @@
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+Disallow:
+
+# Point search engines to your sitemap
+Sitemap: https://z-4444.github.io/dotNet-developer-portfolio/sitemap.xml
